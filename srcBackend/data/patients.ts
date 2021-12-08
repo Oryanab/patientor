@@ -1,4 +1,5 @@
 import { PatientEntry } from "../services/types";
+import { v1 as uuid } from "uuid";
 
 const patients: PatientEntry[] = [
   {
@@ -43,4 +44,23 @@ const patients: PatientEntry[] = [
   },
 ];
 
-export default patients;
+const addPatients = (
+  id: string,
+  name: string,
+  dateOfBirth: string,
+  ssn: string,
+  gender: string,
+  occupation: string
+): PatientEntry[] => {
+  patients.push({
+    id: id,
+    name: name,
+    dateOfBirth: dateOfBirth,
+    ssn: ssn,
+    gender: gender,
+    occupation: occupation,
+  });
+  return patients;
+};
+
+export default { patients, addPatients };
