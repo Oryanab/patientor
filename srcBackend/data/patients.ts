@@ -1,5 +1,4 @@
-import { PatientEntry } from "../services/types";
-import { v1 as uuid } from "uuid";
+import { PatientEntry, Gender } from "../services/types";
 
 const patients: PatientEntry[] = [
   {
@@ -49,7 +48,7 @@ const addPatients = (
   name: string,
   dateOfBirth: string,
   ssn: string,
-  gender: string,
+  gender: Gender,
   occupation: string
 ): PatientEntry[] => {
   patients.push({

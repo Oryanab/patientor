@@ -1,4 +1,4 @@
-import { PatientEntry } from "./types";
+import { PatientEntry, Gender } from "./types";
 
 type Fields = {
   id: unknown;
@@ -85,11 +85,12 @@ const parseSSN = (ssn: unknown): string => {
 
 // Gender DEFINE
 // Gender DEFINE
-const isGender = (gender: unknown): gender is string => {
-  return typeof gender === "string" || gender instanceof String;
+
+const isGender = (param: any): param is Gender => {
+  return Object.values(Gender).includes(param);
 };
 
-const parseGender = (gender: unknown): string => {
+const parseGender = (gender: unknown): Gender => {
   if (!gender || !isGender(gender)) {
     throw new Error("Incorrect or missing comment");
   } else {

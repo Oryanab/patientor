@@ -13,15 +13,20 @@ export interface DiagnoseEntry {
 export type Id = string;
 export type DateOfBirth = string;
 export type Ssn = string;
-export type Gender = string;
+//export type Gender = string;
 export type Occupation = string;
+
+export enum Gender {
+  Male = "male",
+  Female = "female",
+}
 
 export interface PatientEntry {
   id: Id;
   name: Name;
   dateOfBirth: DateOfBirth;
   ssn: Ssn;
-  gender: Gender;
+  gender: Gender | "male" | "female";
   occupation: Occupation;
 }
 
