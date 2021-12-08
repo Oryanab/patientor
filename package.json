@@ -37,7 +37,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
-    "dev": "ts-node-dev ./index.ts"
+    "dev": "ts-node-dev ./srcBackend/index.ts"
   },
   "browserslist": {
     "production": [
