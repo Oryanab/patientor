@@ -26,7 +26,7 @@ export interface PatientEntry {
   name: Name;
   dateOfBirth: DateOfBirth;
   ssn: Ssn;
-  gender: Gender | "male" | "female";
+  gender: Gender;
   occupation: Occupation;
 }
 

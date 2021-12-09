@@ -41,7 +41,10 @@ const patients: PatientEntry[] = [
     gender: "male",
     occupation: "Digital evangelist",
   },
-];
+].map(({ gender, ...rest }) => ({
+  ...rest,
+  gender: Gender[gender],
+}));
 
 const addPatients = (
   id: string,
