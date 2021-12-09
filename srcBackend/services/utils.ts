@@ -86,6 +86,11 @@ const parseSSN = (ssn: unknown): string => {
 // Gender DEFINE
 // Gender DEFINE
 
+// export enum Gender {
+//   Male = "male",
+//   Female = "female",
+// }
+
 const isGender = (param: any): param is Gender => {
   return Object.values(Gender).includes(param);
 };
